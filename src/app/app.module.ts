@@ -20,7 +20,7 @@ import { SettingsComponent } from './components/shared/settings/settings.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
