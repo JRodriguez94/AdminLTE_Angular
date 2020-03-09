@@ -1,0 +1,87 @@
+<h1>Estas en la pagina I</h1>
+
+<mat-card class="example-card">
+	<mat-card-header>
+		<div mat-card-avatar class="example-header-image"></div>
+		<mat-card-title>Shiba Inu</mat-card-title>
+		<mat-card-subtitle>Dog Breed</mat-card-subtitle>
+	</mat-card-header>
+	<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+	<mat-card-content>
+		<p>
+			The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+			A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+			bred for hunting.
+		</p>
+	</mat-card-content>
+	<mat-card-actions>
+		<button mat-button>LIKE</button>
+		<button mat-button>SHARE</button>
+	</mat-card-actions>
+</mat-card>
+
+<mat-progress-bar mode="buffer"></mat-progress-bar>
+
+
+<div class="button-row">
+  <button mat-fab>Basic</button>
+  <button mat-fab color="primary">Primary</button>
+  <button mat-fab color="accent">Accent</button>
+  <button mat-fab color="warn">Warn</button>
+  <button mat-fab disabled>Disabled</button>
+  <button mat-fab>
+    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+  </button>
+  <a mat-fab routerLink=".">Link</a>
+</div>
+
+<div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Amount" type="number" class="example-right-align">
+    <span matPrefix>$&nbsp;</span>
+    <span matSuffix>.00</span>
+  </mat-form-field>
+</div>
+
+
+<div class="example-container">
+  <form class="example-container">
+    <mat-checkbox formControlName="hideRequired">Hide required marker</mat-checkbox>
+    <div>
+      <label>Float label: </label>
+      <mat-radio-group formControlName="floatLabel">
+        <mat-radio-button value="auto">Auto</mat-radio-button>
+        <mat-radio-button value="always">Always</mat-radio-button>
+        <mat-radio-button value="never">Never</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </form>
+
+  <mat-form-field
+    [hideRequiredMarker]="options.value.hideRequired"
+    [floatLabel]="options.value.floatLabel">
+    <input matInput placeholder="Simple placeholder" required>
+  </mat-form-field>
+
+  <mat-form-field [floatLabel]="options.value.floatLabel">
+    <mat-label>Both a label and a placeholder</mat-label>
+    <input matInput placeholder="Simple placeholder">
+  </mat-form-field>
+
+  <mat-form-field
+    [hideRequiredMarker]="options.value.hideRequired"
+    [floatLabel]="options.value.floatLabel">
+    <mat-select required>
+      <mat-option>-- None --</mat-option>
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+    <mat-label><mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i></mat-label>
+  </mat-form-field>
+</div>
